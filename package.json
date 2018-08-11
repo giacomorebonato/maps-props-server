@@ -1,0 +1,27 @@
+{
+  "name": "maps-props-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "node-pg-migrate",
+    "start": "node src/server.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Giacomo Rebonato",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "fastify": "^1.9.0",
+    "is-valid-coordinates": "^1.0.0",
+    "node-pg-migrate": "^3.8.1",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "typescript": "^3.0.1"
+  }
+}
