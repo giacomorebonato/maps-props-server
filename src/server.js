@@ -9,10 +9,6 @@ if (process.env.NODE_ENV === 'development') {
   fastify.use(cors())
 }
 
-fastify.get('/', (request, reply) => {
-  reply.send({ hello: 'world' })
-})
-
 fastify.register(require('./landmarks'))
 
 fastify.listen(process.env.PORT, function(err, address) {

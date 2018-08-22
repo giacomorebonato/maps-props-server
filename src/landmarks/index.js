@@ -7,7 +7,7 @@ let getLandmarksOpts = require('./opts/getLandmarksOpts')
 const ROUTE = '/landmarks'
 
 module.exports = function(fastify, _opts, next) {
-  fastify.delete(ROUTE + '/:id', deleteLandmark)
+  fastify.delete(`${ROUTE}/:id`, deleteLandmark)
   fastify.get(ROUTE, getLandmarksOpts, getLandmarks)
   fastify.post(ROUTE, createLandmarkOpts, createLandmark)
 
