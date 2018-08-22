@@ -19,6 +19,7 @@
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
     "fastify": "^1.9.0",
+    "fastify-swagger": "^0.15.0",
     "is-valid-coordinates": "^1.0.0",
     "node-pg-migrate": "^3.8.1",
     "pg": "^7.4.3",
