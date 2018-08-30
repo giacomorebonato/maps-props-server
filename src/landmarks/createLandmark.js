@@ -1,7 +1,10 @@
+import { FastifyRequest } from 'fastify'
+
 let psql = require('../psql')
 let isValidCoordinates = require('is-valid-coordinates')
 
-async function createLandmark(request, reply) {
+/** @param {import('fastify').FastifyRequest} request */
+async function createLandmark(request) {
   let { category, lat, lng, name } = request.body
 
   if (!isValidCoordinates(lng, lat)) {
@@ -17,6 +20,7 @@ async function createLandmark(request, reply) {
     RETURNING id`,
     [category, name]
   )
+
   return rows
 }
 

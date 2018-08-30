@@ -1,7 +1,8 @@
 let psql = require('../psql')
 let isValidCoordinates = require('is-valid-coordinates')
 
-async function getLandmarks(request, _reply) {
+/** @param {import('fastify').FastifyRequest} request */
+async function getLandmarks(request) {
   let { lat, lng } = request.query
 
   if (!isValidCoordinates(lat, lng)) {
