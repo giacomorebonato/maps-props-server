@@ -3,6 +3,10 @@ exports.shorthands = undefined
 const DAFTS_TABLE = 'dafts'
 const DAFT_DEAL = 'daft_deal'
 
+/**
+ * @typedef {import('node-pg-migrate').MigrationBuilder} MigrationBuilder*
+ * @param {MigrationBuilder} pgm
+ */
 exports.up = pgm => {
   pgm.createType(DAFT_DEAL, ['sale', 'rent'])
   pgm.createTable(DAFTS_TABLE, {

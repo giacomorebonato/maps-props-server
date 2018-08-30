@@ -2,6 +2,10 @@ exports.shorthands = undefined
 
 const LANDMARKS_TABLE = 'landmarks'
 
+/**
+ * @typedef {import('node-pg-migrate').MigrationBuilder} MigrationBuilder*
+ * @param {MigrationBuilder} pgm
+ */
 exports.up = pgm => {
   pgm.createTable(LANDMARKS_TABLE, {
     id: 'id',
